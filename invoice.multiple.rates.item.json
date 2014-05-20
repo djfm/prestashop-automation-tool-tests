@@ -1,0 +1,34 @@
+{
+	"spec": {
+		"runner": "invoice"
+	},
+	"meta": {
+		"order_process": "five_steps",
+		"rounding_rule": "item",
+		"rounding_method": "up"
+	},
+	"carrier": {
+		"name": "SeleniumShipping",
+		"with_handling_fees": false,
+		"shipping_fees": 0
+	},
+	"products": {
+		"Product A": {
+			"price": 10.17,
+			"vat": 20,
+			"quantity": 2
+		},
+		"Product B": {
+			"price": 5.1,
+			"vat": 5.5,
+			"quantity": 3
+		}
+	},
+	"expect": {
+		"invoice": {
+			"total": {
+				"to_pay_tax_included": 40.59
+			}
+		}
+	}
+}
