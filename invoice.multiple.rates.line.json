@@ -4,16 +4,13 @@
 	},
 	"meta": {
 		"order_process": "five_steps",
-		"rounding_rule": "total",
+		"rounding_rule": "line",
 		"rounding_method": "up"
 	},
 	"carrier": {
 		"name": "SeleniumShipping",
 		"with_handling_fees": false,
 		"shipping_fees": 0
-	},
-	"discounts": {
-		"minus 10 tax included": "10 tax included"
 	},
 	"products": {
 		"Product A": {
@@ -25,12 +22,17 @@
 			"price": 5.1,
 			"vat": 5.5,
 			"quantity": 3
+		},
+		"Product C": {
+			"price": 2.85,
+			"vat": 5.5,
+			"quantity": 4
 		}
 	},
 	"expect": {
 		"invoice": {
 			"total": {
-				"to_pay_tax_included": 30.56
+				"to_pay_tax_included": 52.59
 			}
 		}
 	}
