@@ -1,0 +1,24 @@
+{
+	"spec": {
+		"extend": "invoice.multiple.rates.line"
+	},
+	"meta": {
+		"rounding_rule": "total"
+	},
+	"discounts": {
+		"minus 10 percent": "10 %"
+	},
+	"expect": {
+		"invoice": {
+			"total": {
+				"to_pay_tax_included": 47.32
+			},
+			"tax": {
+				"products": {
+					"20.0": 3.66,
+					"5.5": 1.32
+				}
+			}
+		}
+	}
+}
