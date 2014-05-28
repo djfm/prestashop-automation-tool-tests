@@ -5,7 +5,7 @@
 	"meta": {
 		"order_process": "five_steps",
 		"rounding_rule": "total",
-		"rounding_method": "up"
+		"rounding_method": "half_up"
 	},
 	"carrier": {
 		"name": "SeleniumShipping",
