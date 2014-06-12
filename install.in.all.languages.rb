@@ -32,6 +32,8 @@ describe 'Installation of PrestaShop' do
 				@shop.clear_cookies
 				@shop.drop_database
 				@shop.install :country => country, :language => language
+				@shop.login_to_front_office
+				@shop.login_to_back_office
 			end
 		end
 	end
